@@ -1,111 +1,38 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>Advanced Markers CSS Animation</title>
+    <title>Advanced Marker Basic Customization</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <!-- playground-hide -->
     <script>
       const process = { env: {} };
       process.env.GOOGLE_MAPS_API_KEY =
-        "AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE";
+        "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
     </script>
     <!-- playground-hide-end -->
 
-    <script type="module" src="index.js"></script>
-
-    <style>
-    /* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
-#map {
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+  <style>
+  #map {
   height: 100%;
-}
-
-/* 
- * Optional: Makes the sample page fill the window. 
- */
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* set the default transition time */
-:root {
-  --delay-time: .5s;
-}
-
-#map {
-  height: 100%;
-}
-
-#mapContainer {
-  height: 100%;
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-@keyframes drop {
-  0% {
-    transform: translateY(-200px) scaleY(0.9);
-    opacity: 0;
+    }
+  
+  /* 
+   * Optional: Makes the sample page fill the window. 
+   */
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
-  5% {
-    opacity: 0.7;
-  }
-  50% {
-    transform: translateY(0px) scaleY(1);
-    opacity: 1;
-  }
-  65% {
-    transform: translateY(-17px) scaleY(0.9);
-    opacity: 1;
-  }
-  75% {
-    transform: translateY(-22px) scaleY(0.9);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(0px) scaleY(1);
-    opacity: 1;
-  }
-}
-.drop {
-  animation: drop 0.3s linear forwards var(--delay-time);
-}
-
-.ui-button {
-  background-color: #fff;
-  border: 0;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
-  margin: 10px;
-  padding: 0 0.5em;
-  font: 400 18px Roboto, Arial, sans-serif;
-  overflow: hidden;
-  height: 40px;
-  cursor: pointer;
-}
-
-.ui-button:hover {
-  background: rgb(235, 235, 235);
-    </style>
+  </style>
   </head>
   <body>
-    <div id="mapContainer">
-      <div id="map" style="height: 100%"></div>
-    </div>
+    <div id="map"></div>
 
     <!-- prettier-ignore -->
     <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-        ({key: "AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE", v: "weekly"});</script>
+        ({key: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg", v: "weekly"});</script>
   </body>
 </html>
-
