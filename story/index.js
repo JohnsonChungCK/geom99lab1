@@ -3,8 +3,7 @@ const parser = new DOMParser();
 async function initMap() {
   // Request needed libraries.
   const { Map } = (await google.maps.importLibrary(
-    "maps",
-  )) as google.maps.MapsLibrary;
+    "maps")) as google.maps.MapsLibrary;
   const { AdvancedMarkerElement, PinElement } =
     (await google.maps.importLibrary("marker")) as google.maps.MarkerLibrary;
 
