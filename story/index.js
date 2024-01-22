@@ -1,77 +1,33 @@
-const parser = new DOMParser();
+// Initialize and add the map
+let map;
+async function initMap(): Promise<void> {
+  // The location of Uluru
+  const position = { lat: -25.344, lng: 131.031 };
 
-async function initMap() {
   // Request needed libraries.
+  //@ts-ignore
   const { Map } = (await google.maps.importLibrary(
-    "maps")) as google.maps.MapsLibrary;
-  const { AdvancedMarkerElement, PinElement } =
-    (await google.maps.importLibrary("marker")) as google.maps.MarkerLibrary;
+    "maps",
+  )) as google.maps.MapsLibrary;
+  const { AdvancedMarkerElement } = (await google.maps.importLibrary(
+    "marker",
+  )) as google.maps.MarkerLibrary;
 
-  const map = new Map(document.getElementById("map") as HTMLElement, {
-    center: { lat: 37.419, lng: -122.02 },
-    zoom: 14,
-    mapId: "4504f8b37365c3d0",
-  });
-
-  // Each PinElement is paired with a MarkerView to demonstrate setting each parameter.
-
-  // Default marker with title text (no PinElement).
-  const markerViewWithText = new AdvancedMarkerElement({
-    map,
-    position: { lat: 37.419, lng: -122.03 },
-    title: "Title text for the marker at lat: 37.419, lng: -122.03",
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map") as HTMLElement, {
+    zoom: 4,
+    center: position,
+    mapId: "DEMO_MAP_ID",
   });
 
-  // Adjust the scale.
-  const pinScaled = new PinElement({
-    scale: 1.5,
-  });
-  const markerViewScaled = new AdvancedMarkerElement({
-    map,
-    position: { lat: 37.419, lng: -122.02 },
-    content: pinScaled.element,
-  });
-
-  // Change the background color.
-  const pinBackground = new PinElement({
-    background: "#FBBC04",
-  });
-  const markerViewBackground = new AdvancedMarkerElement({
-    map,
-    position: { lat: 37.419, lng: -122.01 },
-    content: pinBackground.element,
-  });
-
-  // Change the border color.
-  const pinBorder = new PinElement({
-    borderColor: "#137333",
-  });
-  const markerViewBorder = new AdvancedMarkerElement({
-    map,
-    position: { lat: 37.415, lng: -122.03 },
-    content: pinBorder.element,
-  });
-
-  // Change the glyph color.
-  const pinGlyph = new PinElement({
-    glyphColor: "white",
-  });
-  const markerViewGlyph = new AdvancedMarkerElement({
-    map,
-    position: { lat: 37.415, lng: -122.02 },
-    content: pinGlyph.element,
-  });
-
-  // Hide the glyph.
-  const pinNoGlyph = new PinElement({
-    glyph: "",
-  });
-  const markerViewNoGlyph = new AdvancedMarkerElement({
-    map,
-    position: { lat: 37.415, lng: -122.01 },
-    content: pinNoGlyph.element,
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerElement({
+    map: map,
+    position: position,
+    title: "Uluru",
   });
 }
 
 initMap();
+
 export {};
