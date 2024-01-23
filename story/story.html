@@ -1,10 +1,7 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Split Map Panes</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/split.js/1.5.11/split.min.js"></script>
-
-    <script type="module" src="./index.js"></script>
+    <title>Default Controls</title>
     <style>
       /* 
  * Always set the map height explicitly to define the size of the div element
@@ -23,57 +20,14 @@ body {
   margin: 0;
   padding: 0;
 }
-
-#container,
-#left,
-#right,
-.map,
-.gutter {
-  height: 100%;
-}
-
-#left,
-#right,
-.gutter {
-  float: left;
-  position: relative;
-  overflow: hidden;
-}
-
-#map-left {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-#map-right {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.gutter {
-  background-color: #eee;
-  background-repeat: no-repeat;
-  background-position: 50%;
-}
-
-.gutter.gutter-horizontal {
-  cursor: col-resize;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==");
-}
     </style>
-      
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <div id="container">
-      <div id="left">
-        <div id="map-left" class="map"></div>
-      </div>
-      <div id="right">
-        <div id="map-right" class="map"></div>
-      </div>
-    </div>
+    <div id="map"></div>
 
     <!-- 
       The `defer` attribute causes the callback to execute after the full HTML
@@ -83,7 +37,7 @@ body {
       for more information.
       -->
     <script
-     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
       defer
     ></script>
   </body>
