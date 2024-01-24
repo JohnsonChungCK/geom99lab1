@@ -1,9 +1,4 @@
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
-}
+
 
 function initialize() {
   const fenway = { lat: 42.345573, lng: -71.098326 };
@@ -20,7 +15,12 @@ function initialize() {
         pitch: 10,
       },
     },
+    
   );
+   const map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+  });
 
   map.setStreetView(panorama);
 }
