@@ -19,6 +19,28 @@ const Yoho = new google.maps.Marker({
     icon: "https://chart.apis.google.com/chart?chst=d_map_pin_icon&chld=cafe|FFFF00",
     title: "Yoho National Park Of Canada",
   });
+
+  const Louise = new google.maps.Marker({
+    position: { lat: 51.416957, lng: -116.218844 },
+    map,
+    icon: "https://chart.apis.google.com/chart?chst=d_map_pin_icon&chld=cafe|FFFF00",
+    title: "Lake Louise",
+  });
+  
+  const Banff_Park = new google.maps.Marker({
+    position: { lat: 51.484163, lng: -116.081291 },
+    map,
+    icon: "https://chart.apis.google.com/chart?chst=d_map_pin_icon&chld=cafe|FFFF00",
+    title: "Banff National Park",
+  });
+  
+  const Banff_Town = new google.maps.Marker({
+    position: { lat: 51.179649, lng: -115.570080 },
+    map,
+    icon: "https://chart.apis.google.com/chart?chst=d_map_pin_icon&chld=cafe|FFFF00",
+    title: "Banff Town",
+  });
+  
 }
 
 
