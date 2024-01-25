@@ -18,7 +18,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+#map2 {
+  height: 50%;
+}
     </style>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script type="module" src="./index.js"></script>
@@ -26,12 +28,13 @@ body {
   <body>
     <div id="map1"></div>
     <div id="pano"></div>
+    <div id="map2"></div>
     <h1>
       Test
     </h1>
 
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initialize&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM-WWHYHIKY-do4kquMy9Z4wQaQx51AuE&callback=initialize&callback=initMap&v=weekly"
       defer
     ></script>
 
