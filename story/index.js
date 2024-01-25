@@ -4,7 +4,7 @@ function initialize() {
   const Banff = { lat: 51.484163, lng: -116.081291 };
   const map = new google.maps.Map(document.getElementById("map1"), {
     center: Banff,
-    zoom: 8,
+    zoom: 9,
   });
   const panorama = new google.maps.StreetViewPanorama(
     document.getElementById("pano"),
@@ -16,7 +16,7 @@ function initialize() {
 const Yoho = new google.maps.Marker({
     position: { lat: 51.465068, lng: -116.581038 },
     map,
-    icon: "ttp://maps.gstatic.com/mapfiles/ms2/micons/hiker.png",
+    icon: "http://maps.gstatic.com/mapfiles/ms2/micons/hiker.png",
     title: "Yoho National Park Of Canada",
   });
 
