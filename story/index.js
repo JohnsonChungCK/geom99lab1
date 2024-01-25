@@ -16,21 +16,21 @@ function initialize() {
 const Yoho = new google.maps.Marker({
     position: { lat: 51.465068, lng: -116.581038 },
     map,
-    icon: "https://chart.apis.google.com/chart?chst=d_map_pin_icon&chld=cafe|FFFF00",
+    icon: "ttp://maps.gstatic.com/mapfiles/ms2/micons/hiker.png",
     title: "Yoho National Park Of Canada",
   });
 
   const Louise = new google.maps.Marker({
     position: { lat: 51.416957, lng: -116.218844 },
     map,
-    icon: "https://chart.apis.google.com/chart?chst=d_map_pin_icon&chld=cafe|FFFF00",
+    icon: "http://maps.gstatic.com/mapfiles/ms2/micons/fishing.png",
     title: "Lake Louise",
   });
   
   const Banff_Park = new google.maps.Marker({
     position: { lat: 51.484163, lng: -116.081291 },
     map,
-    icon: "https://chart.apis.google.com/chart?chst=d_map_pin_icon&chld=cafe|FFFF00",
+    icon: "http://maps.gstatic.com/mapfiles/ms2/micons/tree.png",
     title: "Banff National Park",
   });
   
