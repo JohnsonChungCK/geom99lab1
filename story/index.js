@@ -12,22 +12,16 @@ function initialize() {
   );
   
   map.setStreetView(panorama);
-}
 
-function initMap() {
-  const myLatLng = { lat: 51.464097, lng: -116.577728 };
-  const map2 = new google.maps.Map(document.getElementById("map2"), {
-    zoom: 4,
-    center: myLatLng,
-  });
-
-  new google.maps.Marker({
-    position: myLatLng,
-    map2,
-    title: "Hello World!",
+const Yoho = new google.maps.Marker({
+    position: { lat: 51.465068, lng: -116.581038 },
+    map,
+    icon: "https://chart.apis.google.com/chart?chst=d_map_pin_icon&chld=cafe|FFFF00",
+    title: "Yoho National Park Of Canada",
   });
 }
+
+
 
 window.initialize = initialize;
-window.initMap = initMap;
 
