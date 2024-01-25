@@ -9,7 +9,7 @@ function initialize() {
   const panorama = new google.maps.StreetViewPanorama(
     document.getElementById("pano"),
     {
-      position: fenway,
+      position: Banff,
       pov: {
         heading: 34,
         pitch: 10,
