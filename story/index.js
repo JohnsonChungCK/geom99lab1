@@ -18,9 +18,19 @@ function initialize() {
     
   );
  
-
+  const myLatLng = { lat: 51.464097, lng: -116.577728 };
+  
+  new google.maps.Marker({
+    position: myLatLng,
+    map2,
+    title: "Hello World!",
+  });
+  
   map.setStreetView(panorama);
 }
 
+
+
+
 window.initialize = initialize;
-window.initMap = initMap;
+
