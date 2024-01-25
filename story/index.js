@@ -37,7 +37,7 @@ const Yoho = new google.maps.Marker({
   const Banff_Town = new google.maps.Marker({
     position: { lat: 51.179649, lng: -115.570080 },
     map,
-    icon: "https://chart.apis.google.com/chart?chst=d_map_pin_icon&chld=cafe|FFFF00",
+    icon: "http://maps.gstatic.com/mapfiles/ms2/micons/homegardenbusiness.png",
     title: "Banff Town",
   });
   
