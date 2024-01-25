@@ -22,8 +22,8 @@ function initialize() {
   
   new google.maps.Marker({
     position: myLatLng,
-    map2,
-    title: "Hello World!",
+    map1,
+    title: "Yoho National Park Of Canada",
   });
   
   map.setStreetView(panorama);
