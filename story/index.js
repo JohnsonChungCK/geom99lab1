@@ -1,4 +1,4 @@
-
+// The function initialize is inspired by https://developers.google.com/maps/documentation/javascript/examples/streetview-simple#maps_streetview_simple-html
 
 function initialize() {
   const Banff = { lat: 51.484163, lng: -116.081291 };
