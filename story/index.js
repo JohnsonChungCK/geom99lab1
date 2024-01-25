@@ -29,4 +29,5 @@ function initMap() {
 }
 
 window.initialize = initialize;
+window.initMap = initMap;
 
